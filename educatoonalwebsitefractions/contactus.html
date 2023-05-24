@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function addClass() {
+          document.body.classList.add("sent");
+        }
+    
+        document.addEventListener("DOMContentLoaded", function() {
+          var sendLetter = document.getElementById("sendLetter");
+          sendLetter.addEventListener("click", addClass);
+        });
+      </script>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/contactussig.css" type="text/css">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+  <!-- form starts here-->
+<div style="padding-left:1000px">
+    <div class="wrapper centered">
+        <article class="letter">
+            <div class="side">
+                <h1> Contact Us</h1>
+                <p> <textarea placeholder="Your Message..."> </textarea></p>
+            </div>
+            <div class="side">
+                <p><input type="text" placeholder="Your Name.."></p>
+                <p><input type="email" placeholder="Your Email.."></p>
+                <p><button id="sendLetter"> Send</button></p>
+            </div>
+        </article>
+        <div class="envelope front"> </div>
+        <div class="envelope back"> </div>
+    </div>
+    <p class="result-message centered"> Thank you for your message. We'll get back to you shortly.</p>
+</div>
+<!-- form ends here-->
+
+
+
+
+
+</body>
+</html>

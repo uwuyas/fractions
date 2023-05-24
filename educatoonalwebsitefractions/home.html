@@ -1,0 +1,534 @@
+<!--home,about fraction, quiz, types of fraction, fraction operations-->
+<!DOCTYPE html
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <title>Fractions</title>
+    <style>
+       img:hover{
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+.sample{
+    background:linear-gradient(45deg,#fc466b,#3f5efb);
+height:2000px;
+
+}
+.sample1{
+    
+    
+top:20%;
+left:25%;
+}
+.sample2{
+    background:white;
+    padding:3em;
+    height:50px;
+    border-radius: 20px;
+    border-left: 1px solid white;
+    border-top: 1px solid white;
+
+}
+.styling{
+    background-image: url("https://mobirise.com/extensions/glassm5/freelancer/assets/images/background1.jpg");
+    opacity: 0.7;
+}
+.quiz{
+    opacity: 7.9;
+}
+.quiz-form{
+background:radial-gradient(#66CDAA, #20B2AA);
+width:50%;
+}
+
+input{
+                display:none;
+            }
+            label{
+                display:block;
+                border-radius:3px;
+                position:relative;
+                cursor:pointer;
+                background-color:navy;
+                transition:ease 0.5s;
+
+
+            }
+            label:hover{
+                background-color:dodgerblue;
+            }
+            label::after{
+                content:"+";
+                position:absolute;
+                right:10px;
+
+            }
+            .content{
+                background-color:mediumorchid;
+                padding:25px;
+
+            }
+            input+label+.content{
+                display:none;
+            }
+            input:checked+label+.content{
+                display:block;
+            }
+            input:checked+label::after{
+                content:"-";
+                right:10px;
+            }
+
+            @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
+
+* {
+  font-family: Open Sans;
+}
+
+section {
+  width: 100%;
+  display: inline-block;
+  background:linear-gradient(45deg,yellow,PapayaWhip,#00BFFF);
+  height:25px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  text-decoration: underline;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.footer-distributed{
+background:linear-gradient(90deg,lemonchiffon,palegreen); height: 800px;
+	box-shadow: 0 1px 1px 0 rgba(pink, blue, green, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 55px 50px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	width: 50%;
+}
+
+/* The company logo */
+
+.footer-distributed h3{
+	color:  mediumspringgreen;
+	font: normal 60px 'Open Sans', cursive;
+  font-weight:1000;
+	margin: 0;
+}
+
+.footer-distributed h3 span{
+	color:  limegreen;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color:  lightgreen;
+	margin: 20px 0 12px;
+	padding: 0;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+  font-weight:400;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #222;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+	width: 35%;
+}
+
+.footer-distributed .footer-center i{
+background:linear-gradient(45deg,mediumseagreen,forestgreen); height: 2000px;
+	color: white;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color:grey ;
+  font-weight:400;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+	color:  lightseagreen;
+	text-decoration: none;;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "|";
+  font-weight:300;
+  font-size: 20px;
+  left: 0;
+  color: forestgreen;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	width: 40%;
+}
+
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  teal;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+    width:200px;
+}
+
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:green;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 45px;
+	height: 45px;
+	cursor: pointer;
+	background:linear-gradient(45deg,mediumseagreen,forestgreen); height: 30px;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: honeydew;
+	text-align: center;
+	line-height: 35px;
+     padding-top: 10px;
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 880px) {
+
+	.footer-distributed{
+		font: bold 14px sans-serif;
+	}
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+
+}
+
+
+
+    </style>
+</head>
+<body class="sample">
+
+    <div style="background-color:peachpuff; height:60px; padding-left: 500px; padding-top: 22px; "> 
+
+<a href="#" style="padding: 20px; margin-top: 20px; font-size: 20px; color: darkred;"><b>Home </b></a>
+<a href="#" style="padding: 20px; margin-top: 20px; font-size: 20px; color: darkred;"><b>About Fractions</b></a>
+<a href="#" style="padding: 20px; margin-top: 20px; font-size: 20px;color: darkred;"><b>Quiz</b></a>
+<a href="#" style="padding: 20px; margin-top: 20px; font-size: 20px;color: darkred;"><b>Types of Fractions </b></a>
+<a href="#" style="padding: 20px; margin-top: 20px; font-size: 20px;color: darkred;"> <b>Fraction Operations</b></a>
+<a href="#" style="padding: 20px; margin-top: 20px; font-size: 20px;color: darkred;"> <b>Help</b></a>
+
+</div>
+
+<div style="position:relative">
+    <!-- background for title-->
+    <img src="https://i.pinimg.com/originals/50/2d/c9/502dc9d9c001118fa87920d217041a36.jpg" width="100%" height="600px" style="opacity:0.5;">
+<div style="position: absolute; top: 30%; left:35%">
+    <p style="font-size: 90px;">Fractions</p>
+
+</div>
+</div>
+
+<!-- second section-->
+<div style="display: flex; background-color: black; padding: 80px;" >
+    <p style="padding: 50px;">
+<span style="font-size: 40px; color: white; font-family: dancing script, cursive"> What is a <span style="color:plum;">fraction?</span> </span> <br> <br>
+<span style="color:white;"> 
+   <i> In Mathematics, fractions are represented as a numerical value, which defines a part of a whole.
+     A fraction can be a portion or section of any quantity out of a whole, where the whole can be any number, a specific value,
+      or a thing. </i>
+      <br> <br>
+    <b style="font-size: 30px; color:palegreen;"> A fraction shows part of a whole.</b> <Br> <br> This whole can be a region or a collection. The word fraction is derived from 
+    the Latin word "fractio" which means 'to break'. The Egyptians,
+     being the earliest civilization to study fractions, used fractions to resolve
+      their mathematical problems, which included the division of food, supplies, and the absence of a bullion currency. <br>
+
+      In Ancient Rome, fractions were only written using words to describe a part of the whole.
+       In India, the fractions were first written with one number above another (numerator and denominator), but without a line.
+        It was the Arabs only, who added the line which is used to separate the numerator and the denominator. 
+
+
+</span> </p>
+<!--fraction wall-->
+<div>
+    <img
+ src="https://www.cambridge.org/us/education/blog/wp-content/uploads/2021/01/fraction-wall.png" width="500" height="450"> </div>
+</div>
+
+<!-- third section/ fraction types-->
+<div style="display: flex; background-color:indigo; padding: 80px;" >
+    <p>
+<span style="font-size: 40px; color:lavender; font-family: dancing script, cursive"> Types of Fractions</span> <br> <br>
+<span style="color:white;"> 
+    <b style="font-size: 24px;">Unit Fractions:</b> Fractions with numerator 1 are called unit fractions. <br> <br>
+   <b style="font-size: 24px;"> Proper Fractions:</b> Fractions in which the numerator is less than the denominator are called proper fractions. A proper fraction is less than 1.<br> <br>
+    <b style="font-size: 24px;">Improper Fractions</b>: Fractions in which the numerator is more than or equal to the denominator are called improper fractions. An improper fraction is greater than 1.<br> <br>
+  <b style="font-size: 24px;">  Mixed Fractions:</b> Mixed fractions consist of a whole number and a proper fraction. Since mixed fractions are combinations of whole numbers and a fraction, mixed fractions are always greater than 1.<br><br>
+   <b style="font-size: 24px;">Equivalent fractions:</b> Fractions that represent the same value after being simplified are called equivalent fractions. To get equivalent fractions we can multiply or divide both the numerator and the denominator of the given fraction by the same number.<br><br>
+
+   
+    
+      <br> <br>
+
+</span> </p>
+<!--fraction types image-->
+<Img src="https://media.istockphoto.com/id/1311861031/photo/multicolored-wooden-fractions-notepads-on-wooden-table-trendy-puzzle-toys-geometric-shapes.jpg?s=612x612&w=0&k=20&c=WfBfTqmhPBEYoUb6hFlxZEaoU1ebSyOcnQUtLj-N0f4=">
+</div>
+
+<!--quiz! im happy it worked out! (kinda )-->
+<div class="sample1">
+   
+</div>
+
+<!--4th section-->
+<div style="display: flex; background:linear-gradient(Aqua, Pink);
+ padding: 80px;" >
+    <p>
+<span style="font-size: 40px; color:darkslateblue; font-family: dancing script, cursive"> Fraction Operations</span> <br> <br>
+<span style="color:rebeccapurple;"> 
+    <b style="font-size: 30px;">Adding Fractions:</b> <br><b>Step 1:</b> Find a common denominator
+   <br> <b>Step 2:</b> Add the numerators (and keep the denominator)
+  <br>  <b>Step 3:</b> Simplify the fraction <br> <br>
+   <b style="font-size: 30px;"> Subtracting Fractions:</b> <br><br><b>Step 1:</b> Take the LCM of the denominator. <br><b>Step 2:</b> Convert the denominators to the LCM Value by multiplying the numerator and the denominator by the same number.<br> <b>Step 3:</b> Once the denominator becomes equal, subtract the numerators from each other.<br> <br>
+    <b style="font-size: 30px;">Multiplying Fractions</b><br> <b>Step 1:</b> Multiply the numerator.<br><b>step 2:</b> multiply the denominator <br> <br>
+  <b style="font-size: 30px;">  Dividing Fractions</b><br> <b> Step 1:</b> Flip the fraction after the division sign. <br><b>Step 2:</b> Multiply the fractions as shown above.<br>
+
+   
+    
+      <br> <br>
+    
+
+</span> </p>
+<!--fraction types image-->
+<Img src="https://www.printablee.com//postpic/2022/02/printable-fraction-operations-classroom-math-postern_6174.jpg" height="400px">
+</div>
+
+<!--5th section/help-->
+<div style="display: flex;">
+<!--inner div for img-->
+    <div>
+    <img src="https://cdn.vectorstock.com/i/preview-1x/31/80/question-mark-vector-543180.jpg">
+    </div>
+    <!--inner div 4 questions-->
+    <a href="help.html"></a>
+    <div>
+        <input type="checkbox" id="q1"/>
+        <label for="q1"> I don't understand </label>
+        <div class="content">
+            <p> That's ok, not everyone can understand everything fast. I recomend you go <a href="https://www.splashlearn.com/math-vocabulary/fractions/fraction"> here </a> and <a href="https://byjus.com/maths/fraction-definition/"> here </a> for a better explanation. If those don't help, you can try <a href="https://www.mathnasium.com/blog/why-are-fractions-so-hard-1771167314#:~:text=The%20biggest%20reason%20fractions%20are,what%20base%20you're%20in.">this.</a></p>
+            </div>
+
+            <input type="checkbox" id="q2"/>
+        <label for="q2"> I already understand everything that was listed here. </label>
+        <div class="content">
+            <p> That's great! Here are some more difficult things to try like <a href="https://www.gremathfornonmathpeople.com/tools-you-can-use/nested-fractions-nicely-done#:~:text=A%20nested%20fraction%20is%20a,way%20a%20nested%20fraction%20does."> nested fractions (these are hard) </a> and <a href="https://www.cliffsnotes.com/study-guides/basic-math/basic-math-and-pre-algebra/decimals/decimal-computation"> decimals </a></p>
+            </div>
+
+
+            <input type="checkbox" id="q3"/>
+            <label for="q3"> When will I ever use fractions in the real world?</label>
+            <div class="content">
+                <p> Fractions are used to analyze the performance of a player or a team. Medicine: Fractions are used in a variety of ways in medicine. Most of the medical tests performed by medical professionals display their results in fractions or decimals. With a slight change in the value, an abnormality or disease can be detected.</p>
+                </div>
+    <input type="checkbox" id="q4"/>
+            <label for="q4"> Can decimals be converted to fractions?</label>
+            <div class="content">
+                <p> Decimals can be written in fraction form. To convert a decimal to a fraction, place the decimal number over its place value. For example, in 0.6, the six is in the tenths place, so we place 6 over 10 to create the equivalent fraction, 6/10.</p>
+                </div>
+
+    </div>
+</div>
+<div class="footer">
+<footer style="background:linear-gradient(45deg,lightcoral,peachpuff); height: 445px;">
+    
+    <div>
+          <section>  <marquee style="direction:right; padding-bottom:20px;" > <pre>Is it not clear, however, that bliss and envy are the numerator and denominator of the fraction called happiness?                                                                                                                                                         Five out of four people have trouble with fractions.                                                                  I have one aim only: to impart a fraction of the meaning of the word now.                                                                    Most people can’t think, most of the remainder won’t think, and the small fraction who do think mostly can’t do it very well.           </pre> </marquee>
+    </section>
+        <footer class="footer-distributed">
+            <img src="/35E70136-A94D-4F80-A13D-F736BADF6F7A.png" height="200px">
+                    <div class="footer-left">
+                       
+        
+                        <h3> Love<span> Learning</span></h3>
+        
+                        <p class="footer-links">
+                            <a href="#" class="link-1">Home</a>
+                            
+                            <a href="#">Blog</a>
+                        
+                            <a href="#">Pricing</a>
+                        
+                            <a href="#">About</a>
+                            
+                            <a href="#">Faq for parents</a>
+                            
+                            <a href="#">Contact</a>
+                        </p>
+        
+                        <p class="footer-company-name"> Love Learning © 2023</p>
+                    </div>
+        
+                    <div class="footer-center">
+        
+                        <div>
+                            <i class="fa fa-map-marker"></i>
+                            <p><span>444 S. Cedros Ave</span> Solana Beach, California</p>
+                        </div>
+        
+                        <div>
+                            <i class="fa fa-phone"></i>
+                            <p>+1234567890</p>
+                        </div>
+        
+                        <div>
+                            <i class="fa fa-envelope"></i>
+                            <p><a href="mailto:ayannasharma20@gmail.com">ayannasharma20@gmail.com</a></p>
+                        </div>
+        
+                    </div>
+        
+                    <div class="footer-right">
+                        <div style="display:flex; width:50%">
+                      <div style="width: 800px;">
+                        <p class="footer-company-about">
+                            <span>About the company</span>
+                            We are a team of established tutors that have come together to build educational and interactive websites where children can learn about whatever they need.
+                             We are a brand made in 2023 to help you or your children study on various topics such as reading,mathematics,writing,science and many others.
+                              We look forward to helping your children succeed!
+                        </p>
+             
+                    
+                        <div class="footer-icons">
+        
+                            <a href="https://www.facebook.com/profile.php?id=100092256746366" target="_blank"><i class="fa fa-facebook"></i></a>
+                            <a href="https://twitter.com/bjhedjsm47432" target="_blank"><i class="fa fa-twitter"></i></a>
+                            <a href="https://www.linkedin.com/feed/"><i class="fa fa-linkedin"></i></a>
+                            <a href="https://github.com/"><i class="fa fa-github"></i></a>
+        
+                        </div>
+                      </div>
+<!--<div style=" padding-left: 600px;">   
+<div style=" 
+box-sizing: border-box;
+padding: 3px;
+box-shadow: 5px, solid, rgba(0,0,0,0.9);
+width:300px;
+height: 145px;
+border:5px solid black;
+
+">
+    <h3 style="color: #222;"> Let's keep in touch!</h3>
+   <button> <a href="/contactus.html"> Click Here!</a></button>
+</div>
+
+</div> -->
+
+
+                     </div>   
+        
+                    </div>
+        
+                </footer>
+    </div>
+</footer>
+</div>
+</body>
+</html>
